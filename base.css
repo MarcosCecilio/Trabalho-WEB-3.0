@@ -1,0 +1,107 @@
+/*Parte visual da pagina*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+
+/*Cabeçalho da pagina*/
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272424;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/*Imagem do cabeçalho*/
+header img {
+    width: 150px; /* Ajuste o tamanho da logo */
+}
+
+/* Estilo da seção de produtos */
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.produto {
+    position: relative;
+    width: 45%; /* Defina a largura desejada para cada produto */
+    margin-bottom: 20px; /* Espaçamento entre os produtos */
+}
+
+.produto img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px
+}
+
+.produto p {
+    margin-top: 10px;
+}
+
+.descricao {
+    position: absolute;
+    top: 0;
+    right: 55px; /* Define a distância da lateral direita da imagem */
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo da descrição */
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px; /* Largura da descrição */
+    font-size: 14px;
+}
+
+
+
+
+
+/*Botao de fazer pedido*/
+#fazerPedido {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilo do rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    flex-direction: column;
+}
+
+footer a {
+    margin: 5px;
+    border-color: black;
+}
+
+footer button, footer img {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+footer img {
+    width: 40px; /* Ajuste o tamanho dos ícones conforme necessário */
+    height: 40px;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#logo {
+    width: 150px;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+}
+
+#produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 2rem;
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.produto img {
+    width: 150px;
+    height: 150px;
+    margin-right: 1rem;
+}
+
+button {
+    display: block;
+    margin-top: 1rem;
+    
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+.itemPedido {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+label {
+    flex: 1;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Cont_itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}

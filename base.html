@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria Tio San</title>
+    <link rel="stylesheet" href="/base.css">
+    <style>
+        #map {
+            height: 200px;  /* Altura do mapa */
+            width: 100%;    /* Largura do mapa */
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+</head>
+<body>
+    <header>
+       <img src="/imagens/Logo escura.png" alt="Logo da Hamburgueria" id="Logo">
+    </header>
+    <main>
+        <section id="produtos">
+            <div class="produto">
+                <img src="/imagens/X-PICANHA.png" alt="Hambúrguer 1">
+            <div class="descricao">
+                <p>Conheça nosso mais clássico hamburguer de picanha onde você encontra sabor, felicidade e muita emoção em cada mordida!</p>
+                <p>Hambúrguer Clássico - R$ 36,00</p>
+            </div>
+            </div>
+            <div class="produto">
+                <img src="/imagens/X-BACON.png" alt="Hambúrguer 2">
+            <div class="descricao">
+                <p>Conheça nosso hamburguer de bacon onde você conta com muita suculencia e crocancia</p>    
+                <p>Hamburguer Especial - R$ 27,00</p>
+            </div>
+            </div>
+            <div class="produto">
+                <img src="/imagens/X-SALADA.png" alt="Hambúrguer 3">
+            <div class="descricao">
+                <p>Esse é para você que não quer fugir da dieta e cabe dentro do seu bolso</p>    
+                <p>Hambúrguer Ligth - R$ 23,00</p>
+            </div>
+            </div>
+            <div class="produto">
+                <img src="/imagens/COXINHA DE FRANGO.png" alt="Hambúrguer 4">
+            <div class="descricao">
+                <p>Nossas coxinhas são muito recheadas com frango e uma massa muito saborosa</p>    
+                <p>Coxinha de Frango - R$ 7,00</p>
+            </div>
+            </div>
+            <div class="produto">
+                <img src="/imagens/CB-X-PICANHA+COXINHA.png" alt="Hambúrguer 5">
+            <div class="descricao">
+                <p>Nesse combo você leva um hamburguer de picanha com 1 coxinha de acompanhamento</p>
+                <p>Combo Simples - R$ 38,00</p>
+            </div>
+            </div>
+            <div class="produto">   
+                <img src="/imagens/CB-X-PICANHA+FRITAS.png" alt="Hambúrguer 6">
+            <div class="descricao">
+                <p>O mais pedido da casa conta nao so com o hamburguer da casa mas tambem com batatas fritas</p>
+                <p>Combo Clássico - R$ 42,00</p>
+            </div>
+            </div>
+            <div class="produto">
+                <img src="/imagens/CB-2X-PICANHA.png" alt="Hambúrguer 7">
+            <div class="descricao">
+                <p>Se 1 ja é bom 2 entao é sensacional! aproveite 2 hamburgueres de picanha com um desconto especial</p>
+                <p>Combo Duplo - R$ 64,00</p>
+            </div>
+            </div>
+            <div class="produto">
+                <img src="/imagens/CB-3X-PICANHA.png" alt="Hambúrguer 8">
+            <div class="descricao">
+                <p>Nesse combo você aproveita 3 hamburgueres por um preço imperdivel</p>
+                <p>Combo Triplo - R$ 110,00</p>
+            </div>
+            </div>
+        </section>
+            <h1>Nossa Localização</h1>
+            <div id="map"></div>
+       
+            <button id="fazerPedido" onclick="window.open('Pedido.html', '_blank')">Fazer Pedido</button>
+    </main>
+    <footer>
+        
+             <div class="social">
+                 <a href="https://wa.me/5562985601932" target="_blank"><img src="/imagens/icone whatsapp.png" alt="Whatsapp"></a>
+                 <a href="https://www.instagram.com/kzx767/" target="_blank"><img src="/imagens/icone instagram.jpeg" alt="Instagram"></a>
+                 <a href="https://www.facebook.com/br.estacio" target="_blank"><img src="/imagens/icone facebook.jpeg" alt="Facebook"></a>
+             </div>
+    </footer>
+    <script>
+        var map = L.map('map').setView([-23.66129, -49.26211], 15); // Coordenadas do mapa e nível de zoom
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        L.marker([-23.66129, -49.26211]).addTo(map)
+            .bindPopup('Hamburgueria Tio San. <br><a href="https://www.google.com.br/maps/place/Est%C3%A1cio+de+S%C3%A1+de+Goi%C3%A1s/@-16.6618336,-49.2649507,16.75z/data=!4m15!1m8!3m7!1s0x935ef3c4558d23fb:0x37be808e8d4ccd9b!2zRXN0w6FjaW8gZGUgU8OhIGRlIEdvacOhcw!8m2!3d-16.6616208!4d-49.2620553!10e1!16s%2Fg%2F1tf03kj6!3m5!1s0x935ef3c4558d23fb:0x37be808e8d4ccd9b!8m2!3d-16.6616208!4d-49.2620553!16s%2Fg%2F1tf03kj6?entry=ttu">Ver no Google Maps</a>')
+            .openPopup();
+    </script>
+</html>
